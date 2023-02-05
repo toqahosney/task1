@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --font-family:'Montserrat', sans-serif;
+    --bg-dark:#20262E;
+    --main-color:#D61355;
+    --light-color:#fff;
+    --dark-color:#000;
+    --transition:.7s;
+    --border:.1rem solid #ececec ;
+    --border-main:.2rem solid #D61355 ;
+}
+::-webkit-scrollbar
+{
+    background-color: var(--bg-dark);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 6px;
+    
+}
+
+
+body {
+    font-family: var(--font-family);
+}
+a {
+    text-decoration: none;
+    color: var(--light-color);
+    transition: var(--transition);
+}
+
+i {
+    cursor: pointer;
+    transition: var(--transition);
+}
+.active {
+    color: var(--main-color);
+}
+
+/* start Navbar  */
+.navbar {
+    background: var(--bg-dark);
+    color: var(--light-color);
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.navbar h2 {
+    color: var(--main-color);
+}
+
+/* start banner  */
+.banner {
+    background: url(../images/sava-bobov-AYmUgOqRoGA-unsplash.jpg);
+    background-attachment: fixed;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+.mes {
+    background: rgba(0, 0, 0, .8);
+    border-left:var(--border-main) ;
+}
+
+.mes span {
+    color: var(--main-color);
+}
+
+.social-media i:hover {
+    color: var(--main-color);
+}
+
+
+/* start about  */
+.about {
+    background-color: var(--bg-dark);
+    color: var(--light-color);
+}
+.about-descrition {
+    position: relative;
+}
+.about-descrition h3 {
+    position: relative;
+}
+
+.about-descrition h3::after {
+    content: '';
+    width: 100%;
+    height: .1rem;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -.4rem;
+
+}
+.about-descrition::before {
+    transform: translate(-50%, -50%);
+    content: 'About Me';
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    color: rgba(0, 0, 0, .3);
+    
+}
+.about-items {
+    position: relative;
+    overflow: hidden;
+}
+.about-items img {
+    cursor: pointer;
+}
+
+.about-items::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(45deg ,rgba(214, 19, 85,.8) , rgba(32, 38, 46,.8));
+    left: 0;
+    top: 0;
+    transition: var(--transition) var(--transition);
+}
+
+.about-items:hover::after {
+    top: 100%;
+}
+.item-desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.about-items:hover .item-desc {
+    opacity: 0;
+}
+
+
+/* start service  */
+.service-descrition {
+    position: relative;
+}
+.service-descrition h3 {
+    position: relative;
+}
+
+.service-descrition h3::after {
+    content: '';
+    width: 100%;
+    height: .1rem;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -.4rem;
+
+}
+.service-descrition::before {
+    transform: translate(-50%, -50%);
+    content: 'service Me';
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    color: rgba(0, 0, 0, .3);
+    
+}
+
+
+/* start review  */
+.carousel-inner {
+    height: 50vh;
+}
+
+.carousel-item img{
+    filter: brightness(25%);
+    object-fit: cover;
+    
+}
+.carousel-item p {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--light-color);
+    text-align: center;
+    z-index: 10;
+}
+
+.contacts {
+    background-color: var(--bg-dark);
+}
+
+
+.contacts-descrition {
+    position: relative;
+}
+.contacts-descrition h3 {
+    position: relative;
+    color: var(--light-color);
+}
+
+.contacts-descrition h3::after {
+    content: '';
+    width: 100%;
+    height: .1rem;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -.4rem;
+
+}
+.contacts-descrition::before {
+    transform: translate(-50%, -50%);
+    content: 'contacts Me';
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    color: rgba(0, 0, 0, .3);
+    
+}
